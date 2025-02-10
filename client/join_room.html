@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Room</title>
+</head>
+<body>
+    <h1>Join Chat Room</h1>
+    <form id="join-form">
+        <label for="room">Room Name:</label>
+        <input type="text" id="room" name="room" required />
+        <button type="submit">Join</button>
+    </form>
+
+    <script>
+        document.getElementById('join-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const room = document.getElementById('room').value;
+            window.location.href = `chat_room.html?room=${room}`;
+        });
+    </script>
+</body>
+</html>
